@@ -1,0 +1,517 @@
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  
+  .navbar-brand {
+    display: flex;
+    flex-direction: column;
+    margin-left: -100px;
+  }
+  
+  .logo {
+    font-weight: bold;
+    color: #111111;
+    letter-spacing: 1px;
+  }
+  
+
+
+
+  @font-face {
+    font-family: "Bourgeois";
+    src: 
+        url("../../public/Fonts/Bourgeois-Ultra.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .nav-link:hover {
+    color: #59A52C;
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Réduisez l'espacement entre les éléments si nécessaire */
+    margin-right: -120px;
+  }
+  
+  .nav-link {
+    color: #111111;
+    text-decoration: none;
+    font-family: "Bourgeois", sans-serif;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    /* Supprimez margin-inline pour éviter les décalages */
+    margin: 0 10px; /* Ajustez selon vos besoins */
+  }
+  
+  .login-button {
+    background-color: #59A52C;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    /* Supprimez les marges excessives */
+    margin-left: 10px; /* Ajustez selon vos besoins */
+  }
+  
+  .login-button:hover {
+    background-color: #4a8c25;
+    transform: translateY(-2px);
+  }
+  
+  /* Menu mobile */
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hamburger {
+    font-size: 1.8rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+    }
+  
+    .mobile-menu {
+      display: block;
+    }
+  
+    .navbar {
+      padding: 1rem;
+    }
+  }
+
+  .auth-button {
+    background-color: #59A52C;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: 10px; /* Ajustez selon vos besoins */
+    font-family: "Bourgeois", sans-serif;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    text-transform: uppercase;  }
+
+    /* Ajoutez ces styles à votre fichier CSS existant */
+
+.auth-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 15px;
+}
+
+.logout-icon-button {
+  /* Structure */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  
+  /* Style */
+  background: rgb(255, 245, 245);
+  border: 1px solid red;
+  border-radius: 50%;
+  cursor: pointer;
+  
+  /* Couleur et transition */
+  color: #f70000;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  
+  /* Accessibilité */
+  outline: none;
+  position: relative;
+  overflow: hidden;
+
+}
+
+/* Effet de survol plus élégant */
+.logout-icon-button:hover {
+  background-color: rgba(247, 0, 0, 0.08);
+  transform: scale(1.05);
+}
+
+/* Effet de clic */
+.logout-icon-button:active {
+  transform: scale(0.95);
+}
+
+/* Animation de vague au survol */
+.logout-icon-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(247, 0, 0, 0.2);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%, -50%);
+  transform-origin: 50% 50%;
+}
+
+.logout-icon-button:hover::after {
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(20, 20);
+    opacity: 0;
+  }
+}
+
+/* Focus visible pour accessibilité */
+.logout-icon-button:focus-visible {
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #f70000;
+}
+
+/* Dark mode adaptation */
+@media (prefers-color-scheme: dark) {
+  .logout-icon-button {
+    color: #ff4d4d;
+  }
+  
+  .logout-icon-button:hover {
+    background-color: rgba(255, 77, 77, 0.1);
+  }
+}
+
+/* Base Styles */
+@font-face {
+  font-family: "Bourgeois";
+  src: url("../../public/Fonts/Bourgeois-Ultra.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: "Bourgeois", sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 45px;
+  width: auto;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #111111;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: #59A52C;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #59A52C;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.user-menu {
+  margin-left: 1rem;
+}
+
+.user-menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111111;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.user-menu-button:hover {
+  background-color: rgba(89, 165, 44, 0.1);
+  color: #59A52C;
+}
+
+/* User Icon Styles */
+.user-icon-button {
+  --icon-size: 36px;
+  --hover-bg: rgba(89, 165, 44, 0.08);
+  --active-bg: rgba(89, 165, 44, 0.16);
+  
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  display: grid;
+  place-items: center;
+  color: #111;
+  border-radius: 50%;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: 12px;
+  will-change: transform, background-color;
+}
+
+.user-icon-button:hover {
+  background: var(--hover-bg);
+  transform: scale(1.05);
+}
+
+.user-icon-button:active {
+  background: var(--active-bg);
+  transform: scale(0.95);
+}
+
+.user-icon-button:focus-visible {
+  outline: 2px solid #59A52C;
+  outline-offset: 2px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  --sidebar-width: 300px;
+  --transition-speed: 0.3s;
+  
+  position: fixed;
+  top: 0;
+  right: calc(-1 * var(--sidebar-width));
+  width: var(--sidebar-width);
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.08);
+  z-index: 1001;
+  transition: transform var(--transition-speed) ease-out;
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+.sidebar.open {
+  transform: translateX(-100%);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 1.5rem 1rem;
+}
+
+.sidebar-close-button {
+  --close-size: 40px;
+  
+  width: var(--close-size);
+  height: var(--close-size);
+  display: grid;
+  place-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.sidebar-close-button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #f70000;
+}
+
+.sidebar-content {
+  padding: 0 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar-item:hover {
+  background: rgba(89, 165, 44, 0.08);
+  color: #59A52C;
+}
+
+.sidebar-icon {
+  flex-shrink: 0;
+}
+
+.logout-item {
+  color: #f70000;
+}
+
+.logout-item:hover {
+  color: #f70000;
+}
+
+.logout-item:hover {
+  background: rgba(162, 31, 31, 0.2);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(2px);
+}
+
+.sidebar.open ~ .sidebar-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    --sidebar-width: 280px;
+  }
+  
+  .user-icon-button {
+    --icon-size: 32px;
+    margin-left: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    --sidebar-width: 85vw;
+  }
+  
+  .sidebar-content {
+    padding: 0 1rem 1rem;
+  }
+}
+.user-icon-button {
+  --icon-size: 44px; /* Taille augmentée */
+  --icon-color: #111111;
+  
+  width: var(--icon-size);
+  height: var(--icon-size);
+  display: grid;
+  place-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  color: var(--icon-color);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-left: -12px;
+}
+
+.user-icon-button:hover {
+  background-color: rgba(89, 165, 44, 0.1);
+  transform: scale(1.05);
+}
+
+.user-icon-button .mdi-icon {
+  width: 24px; /* Taille explicite pour l'icône */
+  height: 24px;
+}
+
+/* Version encore plus grande si besoin */
+.user-icon-button.large {
+  --icon-size: 56px;
+}
+
+.user-icon-button.large .mdi-icon {
+  width: 28px;
+  height: 28px;
+}

@@ -1,0 +1,182 @@
+.register-club-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 2rem;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  border-top: 4px solid #59A52C;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.register-header h1 {
+  font-size: 1.8rem;
+  color: #202124;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-family: "Bourgeois", sans-serif;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-group2 label {
+  font-size: 0.9rem;
+  color: #3c4043;
+  text-align: start;
+  font-weight: 500;
+}
+
+.form-group2 input {
+  width: 94%;
+  padding: 12px 16px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.form-group2 input:focus {
+  outline: none;
+  border-color: #59A52C;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(89, 165, 44, 0.2);
+}
+
+.submit-btn {
+  background-color: #59A52C;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  background-color: #4a8c25;
+}
+
+.submit-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.login-redirect {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #5f6368;
+}
+
+.login-redirect a {
+  color: #59A52C;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-redirect a:hover {
+  text-decoration: underline;
+}
+
+/* Notification */
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 1000;
+  background-color: #59A52C;
+  color: white;
+  animation: slideDown 0.3s ease-out;
+  max-width: 90%;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  z-index: 2000;
+}
+
+.notification.error {
+  background-color: #f44336;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 3px solid white;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes slideDown {
+  from { transform: translate(-50%, -50px); opacity: 0; }
+  to { transform: translate(-50%, 0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .register-card {
+    padding: 1.5rem;
+  }
+  
+  .register-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .notification {
+    width: 90%;
+    padding: 12px 20px;
+  }
+}

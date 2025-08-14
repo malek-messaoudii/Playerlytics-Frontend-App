@@ -1,0 +1,229 @@
+.advice-section {
+    background: black;
+    border-left: 4px solid #59A52C;
+    padding: 1.5rem;
+    border-radius: 0 12px 12px 0;
+    margin: 2rem 0;
+    position: relative;
+    transition: all 0.3s ease;
+    width: 60%;
+    margin-left: 40px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .advice-section:hover {
+    transform: translateX(8px);
+  }
+  
+  .advice-section h3 {
+    color: #59A52C;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .advice-section ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .advice-section li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .advice-section li::before {
+    content: '➤';
+    position: absolute;
+    left: 0;
+    color: #59A52C;
+  }
+  
+  /* Upload Container - Interactive Zone */
+  .upload-container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 16px;
+    margin: 40px;
+    border: 1px dashed rgba(92, 92, 92, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    justify-content: center; /* Centrer verticalement */
+    align-items: center; /* Centrer horizontalement */
+  }
+  
+  
+  .upload-container:hover {
+    border-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 30px rgba(100, 149, 237, 0.1);
+  }
+  
+  .upload-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #59A52C;
+    font-weight: 500;
+  }
+  
+  #image-upload {
+    display: none;
+  }
+  
+  .upload-container label[for="image-upload"] {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: black;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(100, 149, 237, 0.3);
+  }
+  
+  .upload-container label[for="image-upload"]:hover {
+    background: black;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(85, 206, 24, 0.2);
+  }
+  
+  /* Image Preview - Holographic Effect */
+  .preview {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  
+  .preview p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.5rem;
+  }
+  
+  .image-preview {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 12px;
+    border: 2px solid rgba(100, 149, 237, 0.5);
+    box-shadow: 0 0 30px rgba(100, 149, 237, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .image-preview:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 40px rgba(100, 149, 237, 0.3);
+  }
+  
+  /* Height Input - Sci-Fi Style */
+  .height-input {
+    margin-top: 1.5rem;
+    width: 20%;
+  }
+  
+  .height-input label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .height-input input {
+    width: 100%;
+    padding: 0.8rem;
+    background: black;
+    border: 1px solid rgba(94, 182, 30, 0.3);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .height-input input:focus {
+    outline: none;
+  }
+  
+  /* Prediction Buttons - Cyberpunk Style */
+  .prediction-buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+  }
+  
+  .btn-predict {
+    flex: 1;
+    min-width: 100px;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    background: linear-gradient(135deg, #59A52C 0%, #59A52C 100%);
+    border: 1px solid rgba(100, 149, 237, 0.3);
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  
+  .btn-predict::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0) 45%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0) 55%
+    );
+    transform: rotate(30deg);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-predict:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 219, 222, 0.2);
+  }
+  
+  .btn-predict:hover::before {
+    left: 100%;
+  }
+  
+  /* Results Container - Data Display */
+  .results-container {
+    background: rgba(0, 0, 0, 1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    border-left: 4px solid #59A52C;
+    margin: 40px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .results-container h3 {
+    color: #59A52C;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+  
+  .results-container ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .results-container li {
+    padding: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .results-container li:last-child {
+    border-bottom: none;
+  }
