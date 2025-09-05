@@ -1,6 +1,6 @@
 # Playerlytics Frontend App
 
-Welcome to the **Playerlytics Frontend App**, a React-based application designed to revolutionize football scouting and analytics across Africa. This application works in conjunction with advanced AI models and data analytics tools to provide insights on player performance, market value, and fraud detection.
+Welcome to **Playerlytics App**, a React-based application designed to revolutionize football scouting and analytics across Africa. This application works in conjunction with advanced AI models and data analytics tools to provide insights on player performance, market value, and fraud detection.
 
 ---
 
@@ -93,7 +93,4 @@ Sports clubs have access to:
    
  4. Start the development server:  
    ```bash
-   npm start
-
- 5.Open your browser at http://localhost:3000 to see the app in action.
-  
+   npm start   
